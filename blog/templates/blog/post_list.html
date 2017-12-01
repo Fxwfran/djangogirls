@@ -5,6 +5,15 @@
     <title>Jelo worl</title>
 </head>
 <body>
-Hola planeta
+Hola planeta, tengo posts mirá:
+
+{{ posts }}
+
+<p>Estos son los nombres: </p>
+{% for post in posts %}
+    <p>{{ post.id }}. {{ post }}</p>
+    <p>A este lo hizo {{ post.author }} el {{ post.created_date.date }} a las {{ post.created_date.time }} </p>
+{% endfor %}
+
 </body>
 </html>
